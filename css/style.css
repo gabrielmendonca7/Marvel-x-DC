@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --cor-vermelha-principal: #D60223;
+    --cor-vermelha-media: #f89284;
+    --cor-vermelha-fraca: #ffbebe;
+  
+    --cor-marrom-fraco: #ebd5d2;
+  
+    --cor-azul-principal: #0271F7;
+    --cor-azul-media: #d3ffff;
+    --cor-azul-fraca: #8fbff8;
+  
+    --cor-roxa-fraca: #c2c2f1;
+  
+    --cor-titulo-fraco: #faefd8;
+    --cor-titulo-forte: #f77a2c;
+  
+    --cor-padrao: #ffffff;
+    --cor-secundaria: #000000;
+  }
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@font-face {
+    font-family: 'mk11';
+    src: url(/Marvel-x-DC/Kombat11-Regular.ttf);
+}
+
+
+body{
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--cor-secundaria); 
+}
+
+body::before{
+    content: '';
+    background-image: url("/Marvel-x-DC/imgs/1cYrMYF.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabeca .title{
+    color: white;
+    z-index: 1;
+    display: flex;
+}
+
+
+.title{
+    font-family: 'mk11','Orbitron',sans-serif;
+    font-weight: lighter;
+}
+
+ul {
+    list-style: none;
+  }

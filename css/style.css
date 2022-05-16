@@ -33,15 +33,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @font-face {
-    font-family: 'mk11';
-    src: url(/Marvel-x-DC/Kombat11-Regular.ttf);
+    font-family: 'sf4';
+    src: url(../SSF4\ ABUKET.ttf);
 }
 
 
 body{
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'sf4', serif;
     background-color: var(--cor-secundaria); 
 }
+
+/* FUNDO COM OCUPACIDADE */
 
 body::before{
     content: '';
@@ -58,20 +60,153 @@ main{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-.cabeca .title{
-    color: white;
+/* CABEÇALHO */
+
+.cabeca {
+    justify-content: center;
     z-index: 1;
     display: flex;
 }
 
-
-.title{
-    font-family: 'mk11','Orbitron',sans-serif;
-    font-weight: lighter;
+.cabeca .title{
+    -webkit-text-stroke: 2px #FFB00C;
+   font-family: 'sf4','Orbitron',sans-serif;
+      text-transform: uppercase;
+    font-size: 52px;
+    line-height: 102px;
 }
+
+/* SELEÇÃO DE PERSONAGENS */
+
+.selecionar-personagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personagem-grande{
+    text-align: center;
+    width: 30%;
+    height: 70vh;
+    position: relative;
+}
+
+.selecionar-personagem .personagem-grande .nome::before{
+    content: '';
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    
+}
+
+.selecionar-personagem .personagem-grande img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.selecionar-personagem .personagem-grande .nome h2{
+    color: var(--cor-padrao);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    font-size: 29px;
+}
+
+.selecionar-personagem .personagem-grande.personagem-jogador-1 .nome::before{
+    background-color: var(--cor-azul-principal);
+}
+
+.selecionar-personagem .personagem-grande.personagem-jogador-2 .nome::before{
+    background-color: var(--cor-vermelha-principal);
+}
+
 
 ul {
     list-style: none;
   }
+
+  /* LISTA DE PERSONAGENS */
+
+  .lista-personagens{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 600px;
+      justify-content: center;
+      gap: 12px;
+  }
+
+  .personagem{
+      border: 2px solid var(--cor-padrao);
+      background-color: var(--cor-padrao) ;
+      width: 30%;
+      height: 160px;
+      cursor: pointer;
+      z-index: 2;
+      border-radius: 5px;
+      position: relative;
+      transition: 0.15s ease-in-out;
+  }
+
+  .personagem img{
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+  }
+
+  .personagem.selecionado{
+      border: 2px solid var(--cor-azul-media);
+      animation: c-glowing-blue .3s ease-in-out infinite;
+      animation-direction: alternate;
+  }
+
+  .personagem:hover{
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.09);
+    z-index: 2;
+  }
+
+  .personagem.jogador-2-selecionado{
+    border: 2px solid var(--cor-vermelha-media);
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.personagem.jogador-2-selecionado:hover{
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.personagem .tag{
+    display: none;
+    top: 5px;
+    position: absolute;
+    left: 5px;
+    color: var(--cor-azul-media);
+    transition: opacity .3 ease-in-out;
+    animation: alternate text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.personagem.selecionado .tag{
+    display: block;
+    animation: alternate text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+
+}
+
+.personagem.jogador-2-selecionado .tag{
+    display: block;
+    animation: alternate text-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+    
+}
+
+

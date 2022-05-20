@@ -1,10 +1,10 @@
 @media (max-width: 1280px){
     .cabeca .title{
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .selecionar-personagem .lista-personagens{
-        max-width: 330px;
+        max-width: 233px;
     }
 
     .selecionar-personagem .lista-personagens .personagem{
@@ -13,10 +13,26 @@
     }
 }
 
+@media (max-width: 830px){
+    .selecionar-personagem .personagem-grande img{
+        left: 50%;
+        width: 250px;
+        height: 430px;
+    } 
+    .selecionar-personagem .personagem-grande .nome h2{
+        padding: 84px;
 
-@media (max-width: 767px){
+    } .selecionar-personagem .personagem-grande.personagem-jogador-2 .nome::before
+    {
+        bottom: 64px;
+    } .selecionar-personagem .personagem-grande.personagem-jogador-1 .nome::before{
+        bottom: 64px;
+    }
+}
+
+
+@media (max-width: 768px){
     body::before{
-        background-image: url(../imgs/bg-mobile.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -24,7 +40,7 @@
     }
 
     main{
-        padding: 0 5px ;
+        padding: 0 5px;
         justify-content: start;
     }
 

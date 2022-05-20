@@ -39,7 +39,7 @@
 
 
 body{
-    font-family: 'sf4', serif;
+    font-family: 'orbitron', serif;
     background-color: var(--cor-secundaria); 
 }
 
@@ -47,17 +47,17 @@ body{
 
 body::before{
     content: '';
-    background-image: url("/Marvel-x-DC/imgs/1cYrMYF.gif");
+    background-image: url("../imgs/1zfb.gif");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 main{
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +73,7 @@ main{
 
 .cabeca .title{
     -webkit-text-stroke: 2px #FFB00C;
-   font-family: 'sf4','Orbitron',sans-serif;
+   font-family: 'Orbitron',sans-serif;
       text-transform: uppercase;
     font-size: 52px;
     line-height: 102px;
@@ -89,7 +89,7 @@ main{
 
 .personagem-grande{
     text-align: center;
-    width: 30%;
+    width: 300px;
     height: 70vh;
     position: relative;
 }
@@ -99,14 +99,14 @@ main{
     height: 30px;
     width: 100%;
     position: absolute;
-    bottom: 0px;
-    left: 0;
+    bottom: -15px;
+    left: 0px;
     
 }
 
 .selecionar-personagem .personagem-grande img{
     position: absolute;
-    left: 50%;
+    left: 45%;
     top: 50%;
     transform: translate(-50%,-50%);
 }
@@ -116,7 +116,7 @@ main{
     position: absolute;
     bottom: 0px;
     width: 100%;
-    font-size: 29px;
+    font-size: 27px;
 }
 
 .selecionar-personagem .personagem-grande.personagem-jogador-1 .nome::before{
@@ -145,8 +145,8 @@ ul {
   .personagem{
       border: 2px solid var(--cor-padrao);
       background-color: var(--cor-padrao) ;
-      width: 30%;
-      height: 160px;
+      width: 24%;
+      height: 150px;
       cursor: pointer;
       z-index: 2;
       border-radius: 5px;
@@ -161,7 +161,7 @@ ul {
   }
 
   .personagem.selecionado{
-      border: 2px solid var(--cor-azul-media);
+      border: 2px solid var(--cor-azul-fraca);
       animation: c-glowing-blue .3s ease-in-out infinite;
       animation-direction: alternate;
   }
@@ -188,8 +188,9 @@ ul {
     display: none;
     top: 5px;
     position: absolute;
+    font-size: 16px;
     left: 5px;
-    color: var(--cor-azul-media);
+    color: var(--cor-azul-principal);
     transition: opacity .3 ease-in-out;
     animation: alternate text-glowing-blue .3s ease-in-out infinite;
     animation-direction: alternate;
@@ -204,9 +205,14 @@ ul {
 
 .personagem.jogador-2-selecionado .tag{
     display: block;
+    color: var(--cor-vermelha-principal);
     animation: alternate text-glowing-red .3s ease-in-out infinite;
     animation-direction: alternate;
     
 }
+
+
+
+
 
 
